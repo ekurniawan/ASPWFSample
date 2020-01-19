@@ -8,6 +8,7 @@ namespace SampleWebForm.Models
 {
     public class Product
     {
+        //
         [ScaffoldColumn(false)]
         public int ProductID { get; set; }
 
