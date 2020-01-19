@@ -15,24 +15,6 @@ namespace SampleWebForm
 
         }
 
-        public List<Product> GetProducts(int startIndex, int maxRows)
-        {
-            using (ProductContext entities = new ProductContext())
-            {
-                return (from p in entities.Products
-                        select p)
-                            .OrderBy(p => p.ProductID)
-                            .Skip(startIndex)
-                            .Take(maxRows).ToList();
-            }
-        }
-
-        public int GetProductCount()
-        {
-            using (ProductContext entities = new ProductContext())
-            {
-                return entities.Products.Count();
-            }
-        }
+       
     }
 }
